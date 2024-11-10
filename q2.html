@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Validation</title>
+    <script>
+        function checkInput() {
+            var userInput = document.getElementById("userInput").value;
+            
+            if (isNaN(userInput)) {
+                alert("Please insert a number!");
+            } else {
+                var number = parseFloat(userInput);
+                
+                if (number < 10) {
+                    alert("The number is lower than 10");
+                } else {
+                    alert("The number is higher than 10");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userInput" placeholder="Enter a number">
+    <button onclick="checkInput()">Check</button>
+</body>
+</html>
